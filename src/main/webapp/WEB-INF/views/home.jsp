@@ -8,6 +8,9 @@
 <h1>
 	Hello world!  
 </h1>
+<form method="get" action="<%=request.getContextPath()%>/skillUpload">
+<button>button</button>
+</form>
 
 <P>  The time on the server is ${serverTime}. </P>
 </body>
