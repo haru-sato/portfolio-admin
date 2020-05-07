@@ -96,12 +96,16 @@ public class dbAccessSampleController {
      */	
     private List<Map<String, String>> setSelectList() {	
         // JSPに渡すデータを設定する	
-        List<Map<String, String>> list = jdbcTemplate.query("select name, capital_city from prefectures",	
+        List<Map<String, String>> list = jdbcTemplate.query("select name, capital_city from prefectures",
+        // jdbcでMySQLにアクセス　jdbc.propertiesファイルなどで定義している
+        	//SQLの構文 
                 new RowMapper<Map<String, String>>() {	
                     @SuppressWarnings({ "rawtypes", "unchecked" })	
                     public Map<String, String> mapRow(ResultSet rs, int rowNum) throws SQLException {	
+                        // ResultセットがDBの１レコードを表している
                         Map<String, String> map = new HashMap();	
                         map.put("name", rs.getString("name"));	
+                        // 左がkey 　右はデータ名99行目のnameと一緒
                         map.put("capital_city", rs.getString("capital_city"));	
                         return map;	
                     }	
