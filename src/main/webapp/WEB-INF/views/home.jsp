@@ -8,7 +8,10 @@
 <h1>
 	Hello world!  
 </h1>
+<form method="get" action="<%=request.getContextPath()%>/upload">
+	<!-- upload(URL)の取得をSkillControllerに要求　つまりuplpadを表示してくださいてこと -->
+<button>button</button>
+</form>
 
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>
