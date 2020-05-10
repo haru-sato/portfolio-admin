@@ -6,11 +6,12 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	Hello world!
 </h1>
-<form method="get" action="<%=request.getContextPath()%>/upload">
+<form method="get" action="<%=request.getContextPath()%>/skillupload">
 	<!-- upload(URL)の取得をSkillControllerに要求　つまりuplpadを表示してくださいてこと -->
-<button>button</button>
+	<!-- uploadの部分を他のControllerのvalueで定義した部分に変えればそれを表示できる -->
+<button>skill upload</button>
 </form>
 
 </body>

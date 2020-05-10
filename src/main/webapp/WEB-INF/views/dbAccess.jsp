@@ -8,22 +8,22 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Prefectures</title>
+<title>skills</title>
 </head>
 <body>
 	<div style="border-bottom: solid 1px #cbcbcb; padding: 10px 20px;">
-		Prefectures</div>
-	<form method="post" action="<%=request.getContextPath()%>/insertSample">
+		skills</div>
+	<form method="post" action="<%=request.getContextPath()%>/insert">
 		<div style="padding: 5px;">
 			<button type="submit">登録</button>
 		</div>
 	</form>
-	<form method="post" action="<%=request.getContextPath()%>/updateSample">
+	<form method="post" action="<%=request.getContextPath()%>/update">
 		<div style="padding: 5px;">
 			<button type="submit">更新</button>
 		</div>
 	</form>
-	<form method="post" action="<%=request.getContextPath()%>/deleteSample">
+	<form method="post" action="<%=request.getContextPath()%>/delete">
 		<div style="padding: 5px;">
 			<button type="submit">削除</button>
 		</div>
@@ -37,15 +37,15 @@
 		<table
 			style="table-layout: fixed; border-collapse: collapse; width: 100%;">
 			<tr>
-				<th style="border: solid 1px #cbcbcb; width: 300px;">都道府県</th>
-				<th style="border: solid 1px #cbcbcb;">県庁所在地</th>
-				<th style="border: solid 1px #cbcbcb; width: 300px;">地方</th>
+				<th style="border: solid 1px #cbcbcb; width: 300px;">カテゴリー</th>
+				<th style="border: solid 1px #cbcbcb;">スキル名</th>
+				<th style="border: solid 1px #cbcbcb; width: 300px;">スコア</th>
 			</tr>
 			<c:forEach var="item" items="${items}">
 				<tr>
-					<th style="border: solid 1px #cbcbcb; width: 300px;">${item.get("name")}</th>
-					<th style="border: solid 1px #cbcbcb;">${item.get("capital_city")}</th>
-					<th style="border: solid 1px #cbcbcb; width: 300px;">${item.get("regionName")}</th>
+					<th style="border: solid 1px #cbcbcb; width: 300px;">${item.get("category")}</th>
+					<th style="border: solid 1px #cbcbcb;">${item.get("name")}</th>
+					<th style="border: solid 1px #cbcbcb; width: 300px;">${item.get("score")}</th>
 				</tr>
 			</c:forEach>
 		</table>
