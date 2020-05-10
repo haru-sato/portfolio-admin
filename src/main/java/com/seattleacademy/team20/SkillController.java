@@ -1,5 +1,4 @@
 package com.seattleacademy.team20;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.ResultSet;
@@ -81,7 +80,7 @@ public class SkillController {
    public void uploadSkill(List<Skill> skills) {
 	   // データの保存
 	   final FirebaseDatabase database = FirebaseDatabase.getInstance(app);
-	   DatabaseReference ref = database.getReference("skills-demo");
+	   DatabaseReference ref = database.getReference("skills");
 
 	   // Map型のリストを作る。MapはStringで聞かれたものに対し、Object型で返すようにしている
 	   List<Map<String,Object>> dataList = new ArrayList<Map<String,Object>>();
