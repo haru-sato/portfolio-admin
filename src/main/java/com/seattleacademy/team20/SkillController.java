@@ -37,7 +37,7 @@ public class SkillController {
 
     @RequestMapping(value = "/skillupload", method = RequestMethod.GET)
     // valueでupload(URLの1部分になる)を定義
-    public String upload(Locale locale, Model model) throws IOExeption, IOException {
+    public String upload(Locale locale, Model model) throws  IOException {
         // skillUpload.jspのこの作業をしてください
       initialize();
     	List<Skill> skills = selectSkills();
